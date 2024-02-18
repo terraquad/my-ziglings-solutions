@@ -29,13 +29,12 @@ pub fn main() void {
             // ...
             25 => 'Y',
             26 => 'Z',
-            // As in the last exercise, please add the 'else' clause
-            // and this time, have it return an exclamation mark '!'.
+            else => '!',
         };
 
         std.debug.print("{c}", .{real_char});
         // Note: "{c}" forces print() to display the value as a character.
-        // Can you guess what happens if you remove the "c"? Try it!
+        // Can you guess what happens if you remove the "c"? Try it! its gonna be the codepoint number of the char in ascii
     }
 
     std.debug.print("\n", .{});

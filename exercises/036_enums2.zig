@@ -5,7 +5,6 @@
 //
 //     const Stuff = enum(u8){ foo = 16 };
 //
-// You can get the integer out with a builtin function,
 // @intFromEnum(). We'll learn about builtins properly in a later
 // exercise.
 //
@@ -26,12 +25,13 @@ const std = @import("std");
 // are one byte with a value range of 0-255:
 //
 //     #RRGGBB
+//     rgb(RRR, GGG, BBB)
 //
 // Please define and use a pure blue value Color:
 const Color = enum(u32) {
     red = 0xff0000,
     green = 0x00ff00,
-    blue = ???,
+    blue = 0x0000ff,
 };
 
 pub fn main() void {
@@ -53,12 +53,12 @@ pub fn main() void {
         \\<p>
         \\  <span style="color: #{x:0>6}">Red</span>
         \\  <span style="color: #{x:0>6}">Green</span>
-        \\  <span style="color: #{}">Blue</span>
+        \\  <span style="color: #{x:0>6}">Blue</span>
         \\</p>
         \\
     , .{
         @intFromEnum(Color.red),
         @intFromEnum(Color.green),
-        @intFromEnum(???), // Oops! We're missing something!
+        @intFromEnum(Color.blue), // Oops! We're missing something! not anymore
     });
 }

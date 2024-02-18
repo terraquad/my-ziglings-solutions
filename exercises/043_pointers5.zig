@@ -48,15 +48,15 @@ const Character = struct {
     experience: u32,
 
     // I need to use the '?' here to allow for a null value. But
-    // I don't explain it until later. Please don't tell anyone.
+    // I don't explain it until later. Please don't tell anyone. why tho
     mentor: ?*Character = null,
 };
 
 pub fn main() void {
-    var mighty_krodor = Character{
+    var mighty_krodor = Character{ // Krodor!
         .class = Class.wizard,
-        .gold = 10000,
-        .experience = 2340,
+        .gold = 10000, // unbalanced af
+        .experience = 2340, // touch grass
     };
 
     var glorp = Character{ // Glorp!
@@ -68,7 +68,7 @@ pub fn main() void {
 
     // FIX ME!
     // Please pass Glorp to printCharacter():
-    printCharacter(???);
+    printCharacter(&glorp);
 }
 
 // Note how this function's "c" parameter is a pointer to a Character struct.

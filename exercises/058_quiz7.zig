@@ -192,8 +192,8 @@ const TripItem = union(enum) {
             // Oops! The hermit forgot how to capture the union values
             // in a switch statement. Please capture both values as
             // 'p' so the print statements work!
-            .place => print("{s}", .{p.name}),
-            .path => print("--{}->", .{p.dist}),
+            .place => |p| print("{s}", .{p.name}),
+            .path => |p| print("--{}->", .{p.dist}),
         }
     }
 };
@@ -228,7 +228,7 @@ const HermitsNotebook = struct {
     // novelty, it's also a great way to assign multiple items in an
     // array without having to list them one by one. Here we use it to
     // initialize an array with null values.
-    entries: [place_count]?NotebookEntry = .{null} ** place_count,
+    entries: [place_count]?NotebookEntry = .{null} ** place_count, // place_count = 6
 
     // The next entry keeps track of where we are in our "todo" list.
     next_entry: u8 = 0,
@@ -243,10 +243,10 @@ const HermitsNotebook = struct {
             if (i >= self.end_of_entries) break;
 
             // Here's where the hermit got stuck. We need to return
-            // an optional pointer to a NotebookEntry.
+            // an optional pointer to a NotebookEntry. // ?*NotebookEntry
             //
             // What we have with "entry" is the opposite: a pointer to
-            // an optional NotebookEntry!
+            // an optional NotebookEntry! // *?NotebookEntry
             //
             // To get one from the other, we need to dereference
             // "entry" (with .*) and get the non-null value from the
@@ -255,7 +255,7 @@ const HermitsNotebook = struct {
             // dereference and optional value "unwrapping" look
             // together. Remember that you return the address with the
             // "&" operator.
-            if (place == entry.*.?.place) return entry;
+            if (place == entry.*.?.place) return &entry.*.?;
             // Try to make your answer this long:__________;
         }
         return null;
@@ -309,7 +309,7 @@ const HermitsNotebook = struct {
     //
     // Looks like the hermit forgot something in the return value of
     // this function. What could that be?
-    fn getTripTo(self: *HermitsNotebook, trip: []?TripItem, dest: *Place) void {
+    fn getTripTo(self: *HermitsNotebook, trip: []?TripItem, dest: *Place) !void {
         // We start at the destination entry.
         const destination_entry = self.getEntry(dest);
 

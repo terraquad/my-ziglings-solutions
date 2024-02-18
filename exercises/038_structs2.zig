@@ -25,12 +25,20 @@ const Character = struct {
 pub fn main() void {
     var chars: [2]Character = undefined;
 
-    // Glorp the Wise
+    // Glarp the Wase
     chars[0] = Character{
         .role = Role.wizard,
         .gold = 20,
         .health = 100,
         .experience = 10,
+    };
+
+    // Zamp the Laud
+    chars[1] = Character{
+        .role = Role.bard,
+        .gold = 10,
+        .health = 100,
+        .experience = 20,
     };
 
     // Please add "Zump the Loud" with the following properties:
@@ -41,7 +49,7 @@ pub fn main() void {
     //     experience 20
     //
     // Feel free to run this program without adding Zump. What does
-    // it do and why?
+    // it do and why? i think its undefined behaviour (ok nvm i read the text below)
 
     // Printing all RPG characters in a loop:
     for (chars, 0..) |c, num| {
