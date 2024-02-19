@@ -67,11 +67,11 @@ const print = @import("std").debug.print;
 pub fn main() void {
     var letter: u8 = 'A';
 
-    const my_letter:   ???   = &letter;
+    const my_letter: ?*[1]u8 = &letter;
     //               ^^^^^^^
     //           Your type here.
     // Must coerce from &letter (which is a *u8).
-    // Hint: Use coercion Rules 4 and 5.
+    // Hint: Use coercion Rules 4 and 5. thank you 🙏
 
     // When it's right, this will work:
     print("Letter: {u}\n", .{my_letter.?.*[0]});

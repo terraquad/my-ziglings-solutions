@@ -82,19 +82,19 @@ const Duct = struct {
 const DuctError = error{UnmatchedDiameters};
 
 pub fn main() void {
-    // This is a real duck!
+    // This is a real duck! 🦆
     const ducky1 = Duck{
         .eggs = 0,
         .loudness = 3,
     };
 
     // This is not a real duck, but it has quack() and waddle()
-    // abilities, so it's still a "duck".
+    // abilities, so it's still a "duck". 🐤
     const ducky2 = RubberDuck{
         .in_bath = false,
     };
 
-    // This is not even remotely a duck.
+    // This is not even remotely a duck. 🗿
     const ducky3 = Duct{
         .diameter = 17,
         .length = 165,
@@ -123,8 +123,8 @@ fn isADuck(possible_duck: anytype) bool {
     // Please make sure MyType has both waddle() and quack()
     // methods:
     const MyType = @TypeOf(possible_duck);
-    const walks_like_duck = ???;
-    const quacks_like_duck = ???;
+    const walks_like_duck = @hasDecl(MyType, "waddle");
+    const quacks_like_duck = @hasDecl(MyType, "quack");
 
     const is_duck = walks_like_duck and quacks_like_duck;
 

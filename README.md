@@ -1,10 +1,11 @@
 # Ziglings
-# ⚠️ Ziglings has moved from GitHub to Codeberg!
+
+# ⚠️ Ziglings has moved from GitHub to Codeberg
 
 You are looking at the current Ziglings repo if you are viewing
-this at https://codeberg.org/ziglings/exercises/
+this at <https://codeberg.org/ziglings/exercises/>
 
-You can also use the handy URL https://ziglings.org to get here!
+You can also use the handy URL <https://ziglings.org> to get here!
 
 ***
 
@@ -36,9 +37,9 @@ Each exercise is self-contained and self-explained. However,
 you're encouraged to also check out these Zig language resources
 for more detail:
 
-* https://ziglang.org/learn/
-* https://ziglearn.org/
-* https://ziglang.org/documentation/master/
+* <https://ziglang.org/learn/>
+* <https://ziglearn.org/>
+* <https://ziglang.org/documentation/master/>
 * [Zig in Depth! (video series)](https://www.youtube.com/watch?v=MMtvGA1YhW4&list=PLtB7CL7EG7pCw7Xy1SQC53Gl8pI7aDg9t&pp=iAQB)
 
 Also, the [Zig community](https://github.com/ziglang/zig/wiki/Community)
@@ -60,14 +61,14 @@ $ zig version
 Clone this repository with Git:
 
 ```
-$ git clone https://ziglings.org
-$ cd ziglings.org
+git clone https://ziglings.org
+cd ziglings.org
 ```
 
 Then run `zig build` and follow the instructions to begin!
 
 ```
-$ zig build
+zig build
 ```
 
 Note: The output of Ziglings is the unaltered output from the Zig
@@ -77,7 +78,7 @@ reading these.
 ## A Note About Versions
 
 **Hint:** To check out Ziglings for a stable release of Zig, you can use
-the appropriate tag. 
+the appropriate tag.
 
 The Zig language is under very active development. In order to be
 current, Ziglings tracks **development** builds of the Zig
@@ -93,34 +94,34 @@ Once you have a build of the Zig compiler that works with
 Ziglings, they'll continue to work together. But keep in mind
 that if you update one, you may need to also update the other.
 
-
 ### Version Changes
 
 Version-0.12.0-dev.2618
-* *2024-02-05* zig 0.12.0-dev.2618 - changes in `build system` - from `Step.zig_exe` to `Step.graph.zig_exe` - see[#18778](https://github.com/ziglang/zig/issues/18778)
-* *2024-01-05* zig 0.12.0-dev.2043 - rename of `std.Build.FileSource` to `std.Build.LazyPath` - see[#16353](https://github.com/ziglang/zig/issues/16353)
-* *2023-10-24* zig 0.12.0-dev.1243 - changes in `std.ChildProcess`: renamed exec to run - see[#5853](https://github.com/ziglang/zig/issues/5853)
-* *2023-06-26* zig 0.11.0-dev.4246 - changes in compile step (now it can be null)
-* *2023-06-26* zig 0.11.0-dev.3853 - removal of destination type from all cast builtins
-* *2023-06-20* zig 0.11.0-dev.3747 - `@enumToInt` is now `@intFromEnum` and `@intToFloat` is now `@floatFromInt`
-* *2023-05-25* zig 0.11.0-dev.3295 - `std.debug.TTY` is now `std.io.tty`
-* *2023-04-30* zig 0.11.0-dev.2704 - use of the new `std.Build.ExecutableOptions.link_libc` field
-* *2023-04-12* zig 0.11.0-dev.2560 - changes in `std.Build` - remove run() and install()
-* *2023-04-07* zig 0.11.0-dev.2401 - fixes of the new build system - see [#212](https://github.com/ratfactor/ziglings/pull/212)
-* *2023-02-21* zig 0.11.0-dev.2157 - changes in `build system` - new: parallel processing of the build steps
-* *2023-02-21* zig 0.11.0-dev.1711 - changes in `for loops` - new: Multi-Object For-Loops + Struct-of-Arrays
-* *2023-02-12* zig 0.11.0-dev.1638 - changes in `std.Build` cache_root now returns a directory struct
-* *2023-02-04* zig 0.11.0-dev.1568 - changes in `std.Build` (combine `std.build` and `std.build.Builder` into `std.Build`)
-* *2023-01-14* zig 0.11.0-dev.1302 - changes in `@addWithOverflow` (now returns a tuple) and `@typeInfo`; temporary disabled async functionality
-* *2022-09-09* zig 0.10.0-dev.3978 - change in `NativeTargetInfo.detect` in build
-* *2022-09-06* zig 0.10.0-dev.3880 - Ex 074 correctly fails again: comptime array len
-* *2022-08-29* zig 0.10.0-dev.3685 - `@typeName()` output change, stage1 req. for async
-* *2022-07-31* zig 0.10.0-dev.3385 - std lib string `fmt()` option changes
-* *2022-03-19* zig 0.10.0-dev.1427 - method for getting sentinel of type changed
-* *2021-12-20* zig 0.9.0-dev.2025 - `c_void` is now `anyopaque`
-* *2021-06-14* zig 0.9.0-dev.137  - std.build.Id `.Custom` is now `.custom`
-* *2021-04-21* zig 0.8.0-dev.1983 - std.fmt.format() `any` format string required
-* *2021-02-12* zig 0.8.0-dev.1065 - std.fmt.format() `s` (string) format string required
+
+* _2024-02-05_ zig 0.12.0-dev.2618 - changes in `build system` - from `Step.zig_exe` to `Step.graph.zig_exe` - see[#18778](https://github.com/ziglang/zig/issues/18778)
+* _2024-01-05_ zig 0.12.0-dev.2043 - rename of `std.Build.FileSource` to `std.Build.LazyPath` - see[#16353](https://github.com/ziglang/zig/issues/16353)
+* _2023-10-24_ zig 0.12.0-dev.1243 - changes in `std.ChildProcess`: renamed exec to run - see[#5853](https://github.com/ziglang/zig/issues/5853)
+* _2023-06-26_ zig 0.11.0-dev.4246 - changes in compile step (now it can be null)
+* _2023-06-26_ zig 0.11.0-dev.3853 - removal of destination type from all cast builtins
+* _2023-06-20_ zig 0.11.0-dev.3747 - `@enumToInt` is now `@intFromEnum` and `@intToFloat` is now `@floatFromInt`
+* _2023-05-25_ zig 0.11.0-dev.3295 - `std.debug.TTY` is now `std.io.tty`
+* _2023-04-30_ zig 0.11.0-dev.2704 - use of the new `std.Build.ExecutableOptions.link_libc` field
+* _2023-04-12_ zig 0.11.0-dev.2560 - changes in `std.Build` - remove run() and install()
+* _2023-04-07_ zig 0.11.0-dev.2401 - fixes of the new build system - see [#212](https://github.com/ratfactor/ziglings/pull/212)
+* _2023-02-21_ zig 0.11.0-dev.2157 - changes in `build system` - new: parallel processing of the build steps
+* _2023-02-21_ zig 0.11.0-dev.1711 - changes in `for loops` - new: Multi-Object For-Loops + Struct-of-Arrays
+* _2023-02-12_ zig 0.11.0-dev.1638 - changes in `std.Build` cache_root now returns a directory struct
+* _2023-02-04_ zig 0.11.0-dev.1568 - changes in `std.Build` (combine `std.build` and `std.build.Builder` into `std.Build`)
+* _2023-01-14_ zig 0.11.0-dev.1302 - changes in `@addWithOverflow` (now returns a tuple) and `@typeInfo`; temporary disabled async functionality
+* _2022-09-09_ zig 0.10.0-dev.3978 - change in `NativeTargetInfo.detect` in build
+* _2022-09-06_ zig 0.10.0-dev.3880 - Ex 074 correctly fails again: comptime array len
+* _2022-08-29_ zig 0.10.0-dev.3685 - `@typeName()` output change, stage1 req. for async
+* _2022-07-31_ zig 0.10.0-dev.3385 - std lib string `fmt()` option changes
+* _2022-03-19_ zig 0.10.0-dev.1427 - method for getting sentinel of type changed
+* _2021-12-20_ zig 0.9.0-dev.2025 - `c_void` is now `anyopaque`
+* _2021-06-14_ zig 0.9.0-dev.137  - std.build.Id `.Custom` is now `.custom`
+* _2021-04-21_ zig 0.8.0-dev.1983 - std.fmt.format() `any` format string required
+* _2021-02-12_ zig 0.8.0-dev.1065 - std.fmt.format() `s` (string) format string required
 
 ## Advanced Usage
 

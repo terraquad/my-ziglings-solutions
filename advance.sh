@@ -9,9 +9,11 @@ fi
 ex_count=$(cat advance_cnt.txt) # Read file contents to skip passed exercise compliation.
 
 while true; do
-  echo $ex_count > advance_cnt.txt
+  cmd="zig build -Dn=$ex_count" # Ziglings compile command
+  echo $ex_count > advance_cnt.txt # Set here in case user quits with ctrl+c
   clear
-  zig build -Dn=$ex_count
+  echo "Running '$cmd'..."
+  $cmd
   # Zig returned error status code, so user failed exercise
   if [ $? -ne 0 ]; then
     echo
@@ -19,6 +21,7 @@ while true; do
     read -p "Press enter to retry or press Ctrl+C to quit. "
     continue
   fi
+  # Loop was continued up there if user failed, so user passed if he is still here.
   echo
   echo "Exercise $ex_count passed!"
   read -p "Press enter to proceed or press Ctrl+C to quit. "

@@ -4,7 +4,7 @@
 // things we were trying to do could only be done at compile
 // time. We ended up having to do those things MANUALLY, like
 // NORMAL people. Bah! We are PROGRAMMERS! The computer should be
-// doing this work.
+// doing this work. 🗿 based opinion
 //
 // An 'inline for' is performed at compile time, allowing you to
 // programatically loop through a series of items in situations
@@ -40,7 +40,7 @@ pub fn main() void {
 
     const fields = @typeInfo(Narcissus).Struct.fields;
 
-    ??? {
+    inline for (fields) |field| {
         if (field.type != void) {
             print(" {s}", .{field.name});
         }
