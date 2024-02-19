@@ -1,3 +1,11 @@
+# My Ziglings Solutions
+
+These are my solutions from [the amazing ziglings project](https://ziglings.org).
+
+Please do not read the solutions if you get stuck! I also got stuck sometimes but figured it out after some intense thinking.
+
+Anyway here is the original readme from ziglings (codeberg):
+
 # Ziglings
 
 # ⚠️ Ziglings has moved from GitHub to Codeberg
