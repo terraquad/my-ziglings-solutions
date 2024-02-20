@@ -59,8 +59,11 @@ pub fn main() void {
     // turn it into something with a known length. We do have a
     // length... You've actually solved this problem before!
     //
-    // Here's a big hint: do you remember how to take a slice?
-    const printable = ???;
+    // Here's a big hint: do you remember how to take a slice? yes luckily
+    //
+    // im starting to forget some stuff again... so much syntax (imagine a ?[*:0]u32 type)
+    // also i feel like every compiler error i fix brings up a new one
+    const printable = foo.data[0..foo.length];
 
     print("{s}\n", .{printable});
 }

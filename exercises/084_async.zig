@@ -43,12 +43,14 @@
 // Given facts 3 and 4, how do we fix this program (broken by facts
 // 5 and 6)?
 //
+// please make it so the exercises arent skipped (i read the thing at line 951 in build.zig but still idk if my answers are right)
+// if someone from the ziglings team sees this please let me know if i made mistakes in exercises 84-91 (thanks in advance)
 const print = @import("std").debug.print;
 
 pub fn main() void {
     // Additional Hint: you can assign things to '_' when you
     // don't intend to do anything with them.
-    foo();
+    _ = async foo();
 }
 
 fn foo() void {

@@ -29,7 +29,10 @@ pub fn main() void {
     // The main() function can not be async. But we know
     // getBeef() will not suspend with this particular
     // invocation. Please make this okay:
-    var my_beef = getBeef(0);
+    const my_beef = nosuspend getBeef(0);
+    // please stop introducing new keywords
+    // i swear to god even C++ has less junk than zig
+    // and zig advertised to be a small language: https://ziglang.org/learn/overview/#small-simple-language
 
     print("beef? {X}!\n", .{my_beef});
 }

@@ -15,11 +15,15 @@
 // real numbers. With this function, it should be possible to normalize
 // our angle. Let's go.
 
+// tip for ziglings people: you GOT to know C for this one. the readme says that anyone with prior
+// language knowledge could do this. im lucky that i have done c programming before, so this was 
+//no problem for me, but it might be one for others. please explain more c stuff here.
+// (no mention of header files in the comments)
+
 const std = @import("std");
 
 const c = @cImport({
-    // What do we need here?
-    ???
+    @cInclude("math.h");
 });
 
 pub fn main() !void {

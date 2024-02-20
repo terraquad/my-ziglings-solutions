@@ -80,7 +80,9 @@ pub fn main() !void {
     y ^= x;
 
     // What must be written here?
-    ???;
+    // this solution is very hard due to lack of explanation
+    // had to google a c example for this: https://stackoverflow.com/questions/60739081/how-can-i-swap-2-integers-in-c-using-bitwise-operators-and-bit-manipulation
+    x ^= y;
 
     print("x = {d}; y = {d}\n", .{ x, y });
 }

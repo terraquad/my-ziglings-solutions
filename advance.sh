@@ -2,11 +2,11 @@
 # ziglings exercise script becuz im lazy
 
 # Generate count file if it doesn't exist yet
-if [ ! -f advance_cnt.txt ]; then
-  echo 1 > advance_cnt.txt
+if [ ! -f advance_cnt.txt ] || [[ $(cat advance_cnt.txt | xargs) == "" ]]; then
+  echo "1" > advance_cnt.txt
 fi
 
-ex_count=$(cat advance_cnt.txt) # Read file contents to skip passed exercise compliation.
+ex_count=$(cat advance_cnt.txt | xargs) # Read file contents to skip passed exercise compliation.
 
 while true; do
   cmd="zig build -Dn=$ex_count" # Ziglings compile command

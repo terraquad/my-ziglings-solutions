@@ -10,6 +10,9 @@
 //
 //     "ABCDEF"
 //
+
+// im sorry about my outburst of anger in the last exercise
+// but if you see this (zig team) then pls make some keywords std functions or builtins before 1.0.0
 const print = @import("std").debug.print;
 
 pub fn main() void {
@@ -17,7 +20,7 @@ pub fn main() void {
 
     var frame = async suspendable();
 
-    print("X", .{});
+    print("D", .{});
 
     resume frame;
 
@@ -25,11 +28,11 @@ pub fn main() void {
 }
 
 fn suspendable() void {
-    print("X", .{});
+    print("B", .{});
 
     suspend {
-        print("X", .{});
+        print("C", .{});
     }
 
-    print("X", .{});
+    print("E", .{});
 }
